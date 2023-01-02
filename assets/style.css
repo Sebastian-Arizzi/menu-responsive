@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.check-responsive {
+  display: none;
+}
+
+/*menu mobile / tablet / escritorio*/
+.menu-mobile h1 {
+  color: white;
+}
+.menu-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: black;
+}
+.nav-menu {
+  display: flex;
+  background: black;
+  padding: 5px 5px;
+  position: relative;
+  transform: translateY(-100px);
+  /*transform anima la position del elemento*/
+  transition-property: transform;
+  /*especifica la duracion sino no hay animacion*/
+  transition-duration: 1s;
+  /*posiciona el elemento por debajo*/
+  z-index: -1;
+}
+.nav-menu ul > li {
+  margin-top: 5px;
+}
+.nav-menu a {
+  color: white;
+}
+/* muestra el menu oculto */
+.check-responsive:checked + .nav-menu {
+  display: flex;
+  visibility: visible;
+  transform: translateY(0px);
+}
+/* cambia el menu a partir de 820px */
+@media (min-width: 820px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0);
+  }
+
+  .menu-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: rgb(0, 0, 0);
+  }
+  .nav-menu-responsive {
+    visibility: collapse;
+  }
+  .nav-menu ul {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+    background: rgb(0, 0, 0);
+  }
+  .nav-menu {
+    z-index: 2;
+    transform: translateY(0px);
+  }
+}

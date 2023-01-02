@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Responsive Menu</title>
+  </head>
+  <body>
+    <nav>
+      <!-- contenedor principal del nav -->
+      <div class="nav-container">
+        <!-- contenedor mobile-->
+        <div class="menu-mobile">
+          <!-- logo -->
+          <h1 class="nav-logo">SEBARI</h1>
+          <!-- icono hamburguesa -->
+          <label for="menu-icon" class="nav-menu-responsive">
+            <img src="./assets/menu.svg" class="nav-img-responsive" />
+          </label>
+        </div>
+        <!-- checkbox oculto con css   -->
+        <input type="checkbox" id="menu-icon" class="check-responsive" />
+        <!-- menu general -->
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item">Nosotros</a></li>
+            <li><a href="#" class="nav-item">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
